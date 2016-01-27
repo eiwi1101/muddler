@@ -2,3 +2,17 @@ language: ruby
 rvm:
   - 1.9.3
 before_install: gem install bundler -v 1.10.4
+
+addons:
+  code_climate:
+    repo_token: 30b685e4fc2a5d19cdb9eeaaaa6eb8bd40580d90c40090b1c09c70ef17e2336f
+
+notifications:
+  webhooks:
+      urls:
+        - https://webhooks.gitter.im/e/135a9720d0f94da48ac3
+      on_success: always # Change for quieter: 'change'
+      on_failure: always
+      on_start: never
+                            
+  slack: eisertdev:RblCZ5BKH53jLFdS5yHYnOaO

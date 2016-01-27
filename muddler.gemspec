@@ -9,18 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["William Eisert"]
   spec.email         = ["weisert@eisertdev.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Ruby library for creating worlds in a MUD (multi user dungeon)}
+  spec.description   = %q{MUDdler is an engine for running and serving Multi User Dungeons. World creators need only craft the items, spells, character types and other basic definitions of the world. MUDdler takes your .world file and brings the virtual world to life.}
+  spec.homepage      = "https://github.com/eiwi1101/muddler"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
@@ -30,4 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rspec-collection_matchers"
+  spec.add_development_dependency "fuubar"
+  spec.add_development_dependency "codeclimate-test-reporter"
 end
